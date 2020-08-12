@@ -38,4 +38,14 @@ public class chest : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="coin")
+        {
+            print("Get Coin");
+
+            coin++;
+            Destroy(other.gameObject);
+        }
+    }
 }
