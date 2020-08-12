@@ -31,8 +31,8 @@ public class chest : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<chestPrice>().AmountToOpen < coin)
             {
-                print("eat shit");
-                coin -= collision.gameObject.GetComponent<chestPrice>().AmountToOpen;
+                float amount = collision.gameObject.GetComponent<chestPrice>().AmountToOpen;
+                coin -= amount;
                 Instantiate(power[Random.Range(0, power.Length)], collision.gameObject.transform.position, Quaternion.identity);
                 Destroy(collision.gameObject);
             }
