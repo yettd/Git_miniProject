@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class chest : MonoBehaviour
+{
+
+    public GameObject[] power;
+
+    public float coin = 0;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+     
+    }
+    private void OnTriggerStay(Collider collision)
+    {
+        print(collision.gameObject.tag);
+        if (collision.gameObject.tag == "chest" && Input.GetKeyDown(KeyCode.F))
+        {
+            if (collision.gameObject.GetComponent<chestPrice>().AmountToOpen < coin)
+            {
+                print("eat shit");
+                coin -= collision.gameObject.GetComponent<chestPrice>().AmountToOpen;
+                Instantiate(power[Random.Range(0, power.Length)], collision.gameObject.transform.position, Quaternion.identity);
+                Destroy(collision.gameObject);
+            }
+        }
+    }
+}
