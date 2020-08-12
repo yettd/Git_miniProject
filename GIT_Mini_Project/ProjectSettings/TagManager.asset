@@ -9,6 +9,8 @@ TagManager:
   - Speed
   - AttackSpeed
   - chest
+  - enemy
+  - coin
   layers:
   - Default
   - TransparentFX
