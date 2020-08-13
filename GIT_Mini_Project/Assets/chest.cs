@@ -9,10 +9,11 @@ public class chest : MonoBehaviour
 
     public float coin = 0;
 
+    playerScript PS;
     // Start is called before the first frame update
     void Start()
     {
-        
+        PS = transform.parent.gameObject.GetComponent<playerScript>();
     }
 
     // Update is called once per frame
@@ -46,6 +47,10 @@ public class chest : MonoBehaviour
 
             coin++;
             Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "enemy")
+        {
+            PS.Chp -= other.gameObject.GetComponent<enemy>().damage;
         }
     }
 }

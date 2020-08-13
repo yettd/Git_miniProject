@@ -38,7 +38,7 @@ public class enemy : MonoBehaviour
     {
         if(collision.gameObject.tag=="bullet")
         {
-            hp -= 1000;
+            hp -= 10;
         }
     }
 }
