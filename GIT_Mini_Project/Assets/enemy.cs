@@ -41,4 +41,11 @@ public class enemy : MonoBehaviour
             hp -= 10;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "explo")
+        {
+            hp -= 50;
+        }
+    }
 }

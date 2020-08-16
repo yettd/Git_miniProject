@@ -9,7 +9,6 @@ public class playerScript : MonoBehaviour
     public float Chp = 100;
     public float speed = 10;
     public float AttackSpeed = 2;
-    public float chanceToGetRocket = 0;
 
     //shooting
     [SerializeField]
@@ -26,6 +25,10 @@ public class playerScript : MonoBehaviour
     public float coin = 0;
     public GameObject[] power;
 
+    //shoot rocket
+    public GameObject rocket;
+    public float RocketChance;
+    public GameObject RocketSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +64,14 @@ public class playerScript : MonoBehaviour
                 rb.velocity = b.transform.forward * 50;
                 Canshoot = false;
                 Invoke("RCS", AttackSpeed );
+
+                if(Random.Range(0,100)<RocketChance)
+                {
+                    Vector3 target = hit.point;
+                    GameObject rockett = Instantiate(rocket, RocketSpawn.transform.position, RocketSpawn.transform.rotation);
+                    rockett.GetComponent<rocketScript>().target = target;
+                }
+
             }
         }
     }
@@ -82,7 +93,11 @@ public class playerScript : MonoBehaviour
     {
         AttackSpeed -= 0.2f;
     }
-    
+    void UpdateRocketChance()
+    {
+        RocketChance +=1;
+    }
+
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -100,6 +115,11 @@ public class playerScript : MonoBehaviour
         else if (collision.gameObject.tag == "AttackSpeed")
         {
             UpdateAttackSpeed();
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "RC")
+        {
+            UpdateRocketChance();
             Destroy(collision.gameObject);
         }
     }
