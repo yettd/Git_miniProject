@@ -7,6 +7,8 @@ public class coinMovment : MonoBehaviour
     GameObject player;
     public float speed;
     Rigidbody rb;
+
+    bool turn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,29 @@ public class coinMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.forward = Vector3.Lerp(transform.forward,
+        if (!turn)
+        {
+            transform.forward = Vector3.Lerp(transform.forward,
+    
             player.transform.position - transform.position,Time.deltaTime);
-        rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+            rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+            StartCoroutine(turning());
+        }
+        else
+        {
+            transform.forward = Vector3.Lerp(transform.forward,
 
+          player.transform.position - transform.position,1);
+            rb.MovePosition(transform.position + transform.forward * speed*10 * Time.deltaTime);
+        }
+
+        
+
+    }
+
+       public IEnumerator turning()
+    {
+        yield return new WaitForSeconds(2);
+        turn = true;
     }
 }

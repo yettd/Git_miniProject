@@ -19,6 +19,8 @@ public class playerScript : MonoBehaviour
 
     public CharecterControll CC;
 
+    public GameObject boss;
+
     //game specific stuff
 
 
@@ -54,7 +56,6 @@ public class playerScript : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                print(hit.point);
 
                 hand.transform.forward = hit.point - transform.position;
                 
@@ -121,6 +122,20 @@ public class playerScript : MonoBehaviour
         {
             UpdateRocketChance();
             Destroy(collision.gameObject);
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        print(other.gameObject.tag);
+        if (other.gameObject.tag == "tele" && Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(boss,other.transform.position+new Vector3(0,10,0),Quaternion.identity);
+            other.gameObject.GetComponent<summonBoss>().enabled = true;
+            other.gameObject.tag = "Untagged";
+        }
+        if (other.gameObject.tag == "fullyChargeTele" && Input.GetKeyDown(KeyCode.F))
+        {
+            print("done");
         }
     }
     public void RCS()
