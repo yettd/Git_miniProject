@@ -66,11 +66,14 @@
     <Compile Include="Assets\coinMovment.cs" />
     <Compile Include="Assets\enemy.cs" />
     <Compile Include="Assets\explosion.cs" />
+    <Compile Include="Assets\gameManager.cs" />
     <Compile Include="Assets\playerScript.cs" />
     <Compile Include="Assets\rocketScript.cs" />
     <Compile Include="Assets\script\CharecterControll.cs" />
     <Compile Include="Assets\script\SelfMadeCamera.cs" />
     <Compile Include="Assets\script\transparentCamera.cs" />
+    <Compile Include="Assets\spawnEnemy.cs" />
+    <Compile Include="Assets\summonBoss.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Github/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
