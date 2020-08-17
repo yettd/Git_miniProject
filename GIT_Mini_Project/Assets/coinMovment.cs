@@ -32,7 +32,7 @@ public class coinMovment : MonoBehaviour
             transform.forward = Vector3.Lerp(transform.forward,
 
           player.transform.position - transform.position,1);
-            rb.MovePosition(transform.position + transform.forward * speed*10 * Time.deltaTime);
+            rb.MovePosition(transform.position + transform.forward * speed * 3 * Time.deltaTime);
         }
 
         

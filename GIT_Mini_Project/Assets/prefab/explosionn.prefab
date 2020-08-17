@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7969088543117554877}
   - component: {fileID: 2084946323789082585}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: explosionn
   m_TagString: explo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4772,3 +4772,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44c12f23cea8cc4fa9916688ed250eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 30
