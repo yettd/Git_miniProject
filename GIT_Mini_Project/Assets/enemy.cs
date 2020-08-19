@@ -10,6 +10,8 @@ public class enemy : MonoBehaviour
     public float damage;
     Rigidbody rb;
     public GameObject coin;
+
+    public GameObject text;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,14 +40,22 @@ public class enemy : MonoBehaviour
     {
         if(collision.gameObject.tag=="bullet")
         {
-            hp -= 10;
+            hp-= collision.gameObject.GetComponent<bullet>().damage;
+            GameObject a = Instantiate(text, transform.position, Quaternion.identity);
+            a.GetComponent<TextMesh>().text= collision.gameObject.GetComponent<bullet>().damage.ToString();
+            a.GetComponent<Rigidbody>().velocity += new Vector3(0, 10, 0);
+            Destroy(a, 1);
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "explo")
         {
-            hp -= 50;
+            hp -= other.gameObject.GetComponent<explosion>().damage;
+            GameObject a = Instantiate(text, transform.position, Quaternion.identity);
+            a.GetComponent<TextMesh>().text = other.gameObject.GetComponent<bullet>().damage.ToString();
+            a.GetComponent<Rigidbody>().velocity += new Vector3(0, 10, 0);
+            Destroy(a, 1);
         }
     }
 }

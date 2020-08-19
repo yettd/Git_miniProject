@@ -53,4 +53,5 @@ public class chest : MonoBehaviour
             PS.Chp -= other.gameObject.GetComponent<enemy>().damage;
         }
     }
+
 }
