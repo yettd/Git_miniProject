@@ -811,7 +811,7 @@ MonoBehaviour:
   - {fileID: 606113253529645054, guid: 974e27b99ba732f43a48526f13be461f, type: 3}
   - {fileID: 5519301333973306768, guid: b685c5440d8ec874bad6d3ab1255f3b7, type: 3}
   rocket: {fileID: 3476215152808530799, guid: fdc01cc5dcf1efd4baeffed8bb23f8a6, type: 3}
-  RocketChance: 100
+  RocketChance: 1
   RocketSpawn: {fileID: 596560279}
 --- !u!1 &1092652315
 GameObject:
