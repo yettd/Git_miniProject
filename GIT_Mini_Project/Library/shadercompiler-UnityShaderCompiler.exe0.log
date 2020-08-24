@@ -3,6 +3,7 @@ Cmd: initializeCompiler
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Cmd: preprocess
   insize=3608 outsize=1262 ok=1
 Cmd: compileSnippet
@@ -94,6 +95,8 @@ Cmd: compileSnippet
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -179,6 +182,9 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
