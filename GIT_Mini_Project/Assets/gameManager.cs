@@ -20,17 +20,23 @@ public class gameManager : MonoBehaviour
     }
     void Start()
     {
-        InvokeRepeating("spawn",0,3);
+        InvokeRepeating("spawn", 0, 3);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void spawn()
     {
-       GameObject a= Instantiate(spawner,transform.position + Random.insideUnitSphere*50,Quaternion.identity) as GameObject;
-        a.transform.position = new Vector3(a.transform.position.x,transform.position.y, a.transform.position.z);
+        GameObject a = Instantiate(spawner, transform.position + Random.insideUnitSphere * 50, Quaternion.identity) as GameObject;
+        a.transform.position = new Vector3(a.transform.position.x, transform.position.y, a.transform.position.z);
+    }
+    public void changeAtimer()
+    {
+        CancelInvoke("spawn");
+        InvokeRepeating("spawn", 0, 1);
+
     }
 }
