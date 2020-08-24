@@ -38,7 +38,11 @@ public class flyingEnemy : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezePosition;
             print(canShoot);
+<<<<<<< HEAD
             if(canShoot==true)
+=======
+            if (canShoot == true)
+>>>>>>> 20_pohJunKai_v2
             {
 
                 canShoot = false;
@@ -66,7 +70,11 @@ public class flyingEnemy : MonoBehaviour
         print("reseting");
         canShoot = true;
         CancelInvoke("resetshoot");
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 20_pohJunKai_v2
     }
     private void OnCollisionEnter(Collision collision)
     {

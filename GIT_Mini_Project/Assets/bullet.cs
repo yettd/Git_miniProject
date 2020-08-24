@@ -14,7 +14,7 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.gameObject.tag == "enemybullet")
+        if(gameObject.tag=="enemybullet")
         {
             transform.position += transform.forward * 50 * Time.deltaTime;
         }

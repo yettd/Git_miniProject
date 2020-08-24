@@ -63,11 +63,9 @@
     <Compile Include="Assets\bullet.cs" />
     <Compile Include="Assets\chest.cs" />
     <Compile Include="Assets\chestPrice.cs" />
-    <Compile Include="Assets\chestText.cs" />
     <Compile Include="Assets\coinMovment.cs" />
     <Compile Include="Assets\enemy.cs" />
     <Compile Include="Assets\explosion.cs" />
-    <Compile Include="Assets\facePLayer.cs" />
     <Compile Include="Assets\flyingEnemy.cs" />
     <Compile Include="Assets\gameManager.cs" />
     <Compile Include="Assets\playerScript.cs" />
