@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9149527131013487035}
   - component: {fileID: 8900903244354966418}
   - component: {fileID: 5730531125467108523}
+  - component: {fileID: 1030454918204152564}
   m_Layer: 0
   m_Name: Enemy(flight)
   m_TagString: enemy
@@ -116,7 +117,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431074804091446277}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37014b76127b5c14193b69e2150ad94c, type: 3}
   m_Name: 
@@ -126,3 +127,23 @@ MonoBehaviour:
   damage: 10
   coin: {fileID: 2393882709990328590, guid: c64064d99d98cc843b3a5ecaca3a1f52, type: 3}
   text: {fileID: 7942919260210096286, guid: dc61c6779989ce940b432280ebf0bd14, type: 3}
+--- !u!114 &1030454918204152564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431074804091446277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064d6eebad9ead94b825f0b767e66e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  speed: 20
+  damage: 0
+  coin: {fileID: 2393882709990328590, guid: c64064d99d98cc843b3a5ecaca3a1f52, type: 3}
+  text: {fileID: 7942919260210096286, guid: dc61c6779989ce940b432280ebf0bd14, type: 3}
+  canShoot: 1
+  enemybullet: {fileID: 1475757305435848765, guid: adc8b5c32efbb5547819c483afd62e82,
+    type: 3}
