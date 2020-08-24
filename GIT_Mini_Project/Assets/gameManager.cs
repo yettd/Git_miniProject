@@ -33,4 +33,10 @@ public class gameManager : MonoBehaviour
        GameObject a= Instantiate(spawner,transform.position + Random.insideUnitSphere*50,Quaternion.identity) as GameObject;
         a.transform.position = new Vector3(a.transform.position.x,transform.position.y, a.transform.position.z);
     }
+    public void changeAtimer()
+    {
+        CancelInvoke("spawn");
+        InvokeRepeating("spawn", 0, 1);
+
+    }
 }

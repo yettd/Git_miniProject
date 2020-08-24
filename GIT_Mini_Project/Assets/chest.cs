@@ -27,7 +27,7 @@ public class chest : MonoBehaviour
     }
     private void OnTriggerStay(Collider collision)
     {
-        print(collision.gameObject.tag);
+
         if (collision.gameObject.tag == "chest" && Input.GetKeyDown(KeyCode.F))
         {
             if (collision.gameObject.GetComponent<chestPrice>().AmountToOpen < coin)
@@ -37,6 +37,17 @@ public class chest : MonoBehaviour
                 Instantiate(power[Random.Range(0, power.Length)], collision.gameObject.transform.position, Quaternion.identity);
                 Destroy(collision.gameObject);
             }
+        }
+        else if (collision.gameObject.tag == "chest")
+        {
+            collision.transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "chest")
+        {
+            other.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -51,6 +62,10 @@ public class chest : MonoBehaviour
         else if (other.gameObject.tag == "enemy")
         {
             PS.Chp -= other.gameObject.GetComponent<enemy>().damage;
+        }
+        else if (other.gameObject.tag == "enemybullet")
+        {
+            PS.Chp -= other.gameObject.GetComponent<bullet>().damage;
         }
     }
 
