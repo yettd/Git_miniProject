@@ -32,7 +32,11 @@ Transform:
   m_LocalPosition: {x: 3.3, y: 0.5, z: 2.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 4519171332653319824}
+=======
+  - {fileID: 2899429110681661041}
+>>>>>>> 20_pohJunKai_v2
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,7 +124,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1661432, y: 0.20433474, z: 4.0867777}
   m_Center: {x: 0.13186252, y: -0.39783263, z: -0.006131172}
+<<<<<<< HEAD
 --- !u!1 &4574332681526484329
+=======
+--- !u!1 &4613993327848471189
+>>>>>>> 20_pohJunKai_v2
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,10 +136,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4519171332653319824}
   - component: {fileID: 7951872976428624948}
   - component: {fileID: 3442223105013221241}
   - component: {fileID: 3317518491534989494}
+=======
+  - component: {fileID: 2899429110681661041}
+  - component: {fileID: 9193618690199708826}
+  - component: {fileID: 1537000254293782674}
+  - component: {fileID: 8573258430721212830}
+>>>>>>> 20_pohJunKai_v2
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -139,27 +154,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+<<<<<<< HEAD
 --- !u!4 &4519171332653319824
+=======
+--- !u!4 &2899429110681661041
+>>>>>>> 20_pohJunKai_v2
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 4574332681526484329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.49, z: 0}
+=======
+  m_GameObject: {fileID: 4613993327848471189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.22, z: 0}
+>>>>>>> 20_pohJunKai_v2
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871891785734326722}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!23 &7951872976428624948
+=======
+--- !u!23 &9193618690199708826
+>>>>>>> 20_pohJunKai_v2
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 4574332681526484329}
+=======
+  m_GameObject: {fileID: 4613993327848471189}
+>>>>>>> 20_pohJunKai_v2
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -190,13 +223,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!102 &3442223105013221241
+=======
+--- !u!102 &1537000254293782674
+>>>>>>> 20_pohJunKai_v2
 TextMesh:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 4574332681526484329}
   m_Text: asdasfa
   m_OffsetZ: 0
@@ -204,6 +242,15 @@ TextMesh:
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
+=======
+  m_GameObject: {fileID: 4613993327848471189}
+  m_Text: sdsadaf
+  m_OffsetZ: 0
+  m_CharacterSize: 0.4
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 0
+>>>>>>> 20_pohJunKai_v2
   m_TabSize: 4
   m_FontSize: 0
   m_FontStyle: 0
@@ -212,16 +259,27 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
 --- !u!114 &3317518491534989494
+=======
+--- !u!114 &8573258430721212830
+>>>>>>> 20_pohJunKai_v2
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 4574332681526484329}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e88867fcc0663ba409103e8252fcf38c, type: 3}
+=======
+  m_GameObject: {fileID: 4613993327848471189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113d8e92f50d9804592ad79a3b6856fd, type: 3}
+>>>>>>> 20_pohJunKai_v2
   m_Name: 
   m_EditorClassIdentifier: 
   c: {fileID: 2017692705741025474}

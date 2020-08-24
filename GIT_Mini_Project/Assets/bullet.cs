@@ -16,7 +16,7 @@ public class bullet : MonoBehaviour
     {
         if (transform.gameObject.tag == "enemybullet")
         {
-            transform.position += transform.forward * 50 * Time.deltaTime;
+            transform.position += transform.forward * 20 * Time.deltaTime;
         }
     }
     private void OnCollisionEnter(Collision collision)

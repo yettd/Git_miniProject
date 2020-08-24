@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 5954257707306347908}
   - component: {fileID: 2977368247383947361}
   - component: {fileID: 2804839422998073884}
+<<<<<<< HEAD
   - component: {fileID: 6786040684357119336}
+=======
+  - component: {fileID: 386724829684741459}
+>>>>>>> 20_pohJunKai_v2
   m_Layer: 0
   m_Name: DamageText
   m_TagString: Untagged
@@ -109,7 +113,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!114 &6786040684357119336
+=======
+--- !u!114 &386724829684741459
+>>>>>>> 20_pohJunKai_v2
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,6 +126,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7942919260210096286}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 49a078233425095488fdf11974abb782, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 824fc03af935ff245bcd1ecd3811a330, type: 3}
+>>>>>>> 20_pohJunKai_v2
   m_Name: 
   m_EditorClassIdentifier: 
