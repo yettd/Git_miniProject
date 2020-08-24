@@ -52,6 +52,9 @@
     <UnityVersion>2018.4.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2018.4.8f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -60,27 +63,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\bullet.cs" />
-    <Compile Include="Assets\chest.cs" />
-    <Compile Include="Assets\chestPrice.cs" />
-    <Compile Include="Assets\chestText.cs" />
-    <Compile Include="Assets\coinMovment.cs" />
-    <Compile Include="Assets\enemy.cs" />
-    <Compile Include="Assets\explosion.cs" />
-<<<<<<< Updated upstream
-=======
-    <Compile Include="Assets\facePLayer.cs" />
->>>>>>> Stashed changes
-    <Compile Include="Assets\faceText.cs" />
-    <Compile Include="Assets\flyingEnemy.cs" />
-    <Compile Include="Assets\gameManager.cs" />
-    <Compile Include="Assets\playerScript.cs" />
-    <Compile Include="Assets\rocketScript.cs" />
+    <Compile Include="Assets\script\bullet.cs" />
     <Compile Include="Assets\script\CharecterControll.cs" />
+    <Compile Include="Assets\script\chest.cs" />
+    <Compile Include="Assets\script\chestPrice.cs" />
+    <Compile Include="Assets\script\chestText.cs" />
+    <Compile Include="Assets\script\coinMovment.cs" />
+    <Compile Include="Assets\script\enemy.cs" />
+    <Compile Include="Assets\script\explosion.cs" />
+    <Compile Include="Assets\script\faceText.cs" />
+    <Compile Include="Assets\script\flyingEnemy.cs" />
+    <Compile Include="Assets\script\gameManager.cs" />
+    <Compile Include="Assets\script\healthbar.cs" />
+    <Compile Include="Assets\script\playerScript.cs" />
+    <Compile Include="Assets\script\rocketScript.cs" />
     <Compile Include="Assets\script\SelfMadeCamera.cs" />
+    <Compile Include="Assets\script\spawnEnemy.cs" />
+    <Compile Include="Assets\script\summonBoss.cs" />
     <Compile Include="Assets\script\transparentCamera.cs" />
-    <Compile Include="Assets\spawnEnemy.cs" />
-    <Compile Include="Assets\summonBoss.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -100,19 +100,19 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -316,13 +316,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.8f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/Github/Version1/Git_miniProject/GIT_Mini_Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/limna/OneDrive/Desktop/GIT/Git_miniProject/GIT_Mini_Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.8f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

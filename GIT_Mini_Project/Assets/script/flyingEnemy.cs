@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class flyingEnemy : MonoBehaviour
 {
     GameObject player;
@@ -55,7 +56,7 @@ public class flyingEnemy : MonoBehaviour
         {
             for (int i = 0; i < Random.Range(5, 10); i++)
             {
-                Instantiate(coin, transform.position, Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
+                Instantiate(coin, transform.position + transform.forward, Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
             }
             Destroy(gameObject);
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerScript : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class playerScript : MonoBehaviour
     public float Chp = 100;
     public float speed = 10;
     public float AttackSpeed = 2;
+    public Text cointext;
+    public Text powerup;
+    public healthbar healthBar;
+    public static float health;
 
     //shooting
     [SerializeField]
@@ -26,7 +31,7 @@ public class playerScript : MonoBehaviour
 
     public float coin = 0;
     public GameObject[] power;
-
+        
     //shoot rocket
     public GameObject rocket;
     public float RocketChance;
@@ -35,17 +40,24 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        health = Chp;
         CC=GetComponent<CharecterControll>();
+        powerup.enabled = false;
+        healthBar.maxhealth(Chp);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        //print("health"+health);
+        //print("chp"+Chp);
+        cointext.text = ("Coin Collected: " + coin.ToString());
         Debug.DrawRay(camera.transform.position, camera.transform.forward*1000,Color.green);
         Debug.DrawRay(hand.transform.position, hand.transform.forward * 1000, Color.green);
 
         shoot();
-
+        
     }
 
     public void shoot()
@@ -106,23 +118,31 @@ public class playerScript : MonoBehaviour
         if (collision.gameObject.tag == "Hp")
         {
             UpdateHp();
+            StartCoroutine(ShowMessage("health Increase!", 2));
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "Speed")
         {
             UpdateSpeed();
+            StartCoroutine(ShowMessage("Speed Increase!", 2));
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "AttackSpeed")
         {
             UpdateAttackSpeed();
+            StartCoroutine(ShowMessage("Attack Speed Increase!", 2));
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "RC")
         {
             UpdateRocketChance();
+            StartCoroutine(ShowMessage("Rocket Chance Increase!", 2));
             Destroy(collision.gameObject);
         }
+        //else if (collision.gameObject.tag == "enemy")
+        //{
+        //    Chp -= 10;
+        //}
     }
     private void OnTriggerStay(Collider other)
     {
@@ -137,6 +157,13 @@ public class playerScript : MonoBehaviour
         {
             print("done");
         }
+    }
+    IEnumerator ShowMessage(string message, float delay)
+    {
+        powerup.text = message;
+        powerup.enabled = true;
+        yield return new WaitForSeconds(delay);
+        powerup.enabled = false;
     }
     public void RCS()
     {

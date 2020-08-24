@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8900903244354966418}
   - component: {fileID: 5730531125467108523}
   - component: {fileID: 1030454918204152564}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy(flight)
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
-  speed: 20
+  speed: 5
   damage: 0
   coin: {fileID: 2393882709990328590, guid: c64064d99d98cc843b3a5ecaca3a1f52, type: 3}
   text: {fileID: 7942919260210096286, guid: dc61c6779989ce940b432280ebf0bd14, type: 3}
