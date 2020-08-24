@@ -130,7 +130,7 @@ public class playerScript : MonoBehaviour
         if (other.gameObject.tag == "tele" && Input.GetKeyDown(KeyCode.F))
         {
             Instantiate(boss,other.transform.position+new Vector3(0,10,0),Quaternion.identity);
-            other.gameObject.GetComponent<summonBoss>().enabled = true;
+            gameManager.ins.changeAtimer();
             other.gameObject.tag = "Untagged";
         }
         if (other.gameObject.tag == "fullyChargeTele" && Input.GetKeyDown(KeyCode.F))
