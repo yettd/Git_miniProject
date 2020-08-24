@@ -15,6 +15,7 @@ TagManager:
   - explo
   - tele
   - fullyChargeTele
+  - enemybullet
   layers:
   - Default
   - TransparentFX
