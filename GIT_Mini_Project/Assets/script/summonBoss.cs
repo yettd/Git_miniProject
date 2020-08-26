@@ -13,7 +13,7 @@ public class summonBoss : MonoBehaviour
     public Material fullycharge;
 
     [SerializeField]
-    float charging = 0;
+    public float charging = 0;
 
     // Start is called before the first frame update
     void Start()

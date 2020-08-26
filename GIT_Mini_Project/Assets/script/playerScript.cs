@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerScript : MonoBehaviour
 {
@@ -10,10 +11,8 @@ public class playerScript : MonoBehaviour
     public float Chp = 100;
     public float speed = 10;
     public float AttackSpeed = 2;
-    public Text cointext;
     public Text powerup;
-    public healthbar healthBar;
-    public static float health;
+   
 
     //shooting
     [SerializeField]
@@ -40,24 +39,27 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = Chp;
-        CC=GetComponent<CharecterControll>();
-        powerup.enabled = false;
-        healthBar.maxhealth(Chp);
        
+        CC =GetComponent<CharecterControll>();
+        powerup.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //print("health"+health);
-        //print("chp"+Chp);
-        cointext.text = ("Coin Collected: " + coin.ToString());
+       
         Debug.DrawRay(camera.transform.position, camera.transform.forward*1000,Color.green);
         Debug.DrawRay(hand.transform.position, hand.transform.forward * 1000, Color.green);
-
         shoot();
-        
+        if (transform.position.y <= -20)
+        {
+            StartCoroutine(ShowMessage("Press R to Restart.", 2));
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(1);
+            }
+           
+        }
     }
 
     public void shoot()
@@ -139,23 +141,26 @@ public class playerScript : MonoBehaviour
             StartCoroutine(ShowMessage("Rocket Chance Increase!", 2));
             Destroy(collision.gameObject);
         }
-        //else if (collision.gameObject.tag == "enemy")
-        //{
-        //    Chp -= 10;
-        //}
+        else if (collision.gameObject.tag == "enemy")
+        {
+            Chp -= 10;
+           
+        }
+        
     }
     private void OnTriggerStay(Collider other)
     {
         print(other.gameObject.tag);
         if (other.gameObject.tag == "tele" && Input.GetKeyDown(KeyCode.F))
         {
-            Instantiate(boss,other.transform.position+new Vector3(0,10,0),Quaternion.identity);
+            gameManager.ins.changeAtimer();
             other.gameObject.GetComponent<summonBoss>().enabled = true;
             other.gameObject.tag = "Untagged";
         }
         if (other.gameObject.tag == "fullyChargeTele" && Input.GetKeyDown(KeyCode.F))
         {
             print("done");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     IEnumerator ShowMessage(string message, float delay)

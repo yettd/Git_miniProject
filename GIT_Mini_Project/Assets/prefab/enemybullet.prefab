@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 1475757305435848764}
   - component: {fileID: 1475757305435848755}
   - component: {fileID: 7000688105778757272}
+  - component: {fileID: 8553093246494607101}
   m_Layer: 9
   m_Name: enemybullet
   m_TagString: enemybullet
@@ -154,3 +155,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+--- !u!122 &8553093246494607101
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475757305435848765}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294115583
+  m_Size: 0.3

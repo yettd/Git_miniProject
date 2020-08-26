@@ -29,7 +29,7 @@ public class flyingEnemy : MonoBehaviour
               player.transform.position - transform.position, Time.deltaTime);
         print(Vector3.Distance(transform.position, player.transform.position));
 
-        if (Vector3.Distance(transform.position, player.transform.position) > 100)
+        if (Vector3.Distance(transform.position, player.transform.position) > 30)
         {
             rb.constraints = RigidbodyConstraints.None;
 
@@ -43,7 +43,7 @@ public class flyingEnemy : MonoBehaviour
             {
 
                 canShoot = false;
-                Instantiate(enemybullet, transform.position, transform.rotation);
+                Instantiate(enemybullet, transform.position+transform.forward, transform.rotation);
 
             }
             else
@@ -56,7 +56,7 @@ public class flyingEnemy : MonoBehaviour
         {
             for (int i = 0; i < Random.Range(5, 10); i++)
             {
-                Instantiate(coin, transform.position + transform.forward, Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
+                Instantiate(coin, transform.position, Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
             }
             Destroy(gameObject);
         }
