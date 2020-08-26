@@ -63,20 +63,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\bullet.cs" />
-    <Compile Include="Assets\chest.cs" />
-    <Compile Include="Assets\chestPrice.cs" />
-    <Compile Include="Assets\coinMovment.cs" />
-    <Compile Include="Assets\enemy.cs" />
-    <Compile Include="Assets\explosion.cs" />
-    <Compile Include="Assets\gameManager.cs" />
-    <Compile Include="Assets\playerScript.cs" />
-    <Compile Include="Assets\rocketScript.cs" />
+    <Compile Include="Assets\script\bullet.cs" />
     <Compile Include="Assets\script\CharecterControll.cs" />
+    <Compile Include="Assets\script\chest.cs" />
+    <Compile Include="Assets\script\chestPrice.cs" />
+    <Compile Include="Assets\script\chestText.cs" />
+    <Compile Include="Assets\script\coinMovment.cs" />
+    <Compile Include="Assets\script\enemy.cs" />
+    <Compile Include="Assets\script\explosion.cs" />
+    <Compile Include="Assets\script\faceText.cs" />
+    <Compile Include="Assets\script\flyingEnemy.cs" />
+    <Compile Include="Assets\script\gameManager.cs" />
+    <Compile Include="Assets\script\healthbar.cs" />
+    <Compile Include="Assets\script\playerScript.cs" />
+    <Compile Include="Assets\script\rocketScript.cs" />
     <Compile Include="Assets\script\SelfMadeCamera.cs" />
+    <Compile Include="Assets\script\spawnEnemy.cs" />
+    <Compile Include="Assets\script\summonBoss.cs" />
     <Compile Include="Assets\script\transparentCamera.cs" />
-    <Compile Include="Assets\spawnEnemy.cs" />
-    <Compile Include="Assets\summonBoss.cs" />
+    <Compile Include="Assets\textappear.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
