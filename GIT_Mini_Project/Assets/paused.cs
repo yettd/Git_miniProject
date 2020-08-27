@@ -10,8 +10,9 @@ public class paused : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         pausedmenuui.SetActive(false);
+        print("notactive");
 
 
     }
@@ -21,6 +22,7 @@ public class paused : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            print("Paused");
             if (gameispaused)
             {
                 resume();
@@ -41,6 +43,7 @@ public class paused : MonoBehaviour
         pausedmenuui.SetActive(false);
         Time.timeScale = 1f;
         gameispaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void pause()
     {

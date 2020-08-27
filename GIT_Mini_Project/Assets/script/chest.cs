@@ -36,7 +36,7 @@ public class chest : MonoBehaviour
         print(collision.gameObject.tag);
         if (collision.gameObject.tag == "chest" && Input.GetKeyDown(KeyCode.F))
         {
-            if (collision.gameObject.GetComponent<chestPrice>().AmountToOpen < coin)
+            if (collision.gameObject.GetComponent<chestPrice>().AmountToOpen <= coin)
             {
                 float amount = collision.gameObject.GetComponent<chestPrice>().AmountToOpen;
                 coin -= amount;

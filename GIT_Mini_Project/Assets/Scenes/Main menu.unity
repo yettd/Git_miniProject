@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45459014, g: 1.0048823, b: 0.023407048, a: 1}
+  m_IndirectSpecularColor: {r: 0.3476558, g: 0.79199153, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1276,8 +1276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116, y: 68}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -23, y: 19}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745215755
 MonoBehaviour:
@@ -1312,7 +1312,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "WASD TO MOVE.\nSPACE TO JUMP.\nRIGHT MOUSE TO LOOK.\nLEFT MOUSE KEY TO
+    SHOOT.\nESCAPE KEY TO PAUSE. \n"
 --- !u!222 &1745215756
 CanvasRenderer:
   m_ObjectHideFlags: 0

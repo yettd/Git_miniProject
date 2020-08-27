@@ -14,10 +14,11 @@ public class Gameover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     public void endgame()
     {
-        SceneManager.LoadScene("Main Menus");
+        SceneManager.LoadScene("Main Menu");
     }
 }

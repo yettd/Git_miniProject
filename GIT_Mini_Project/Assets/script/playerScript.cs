@@ -42,7 +42,7 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Time.timeScale = 1f;
         CC =GetComponent<CharecterControll>();
         powerup.enabled = false;
     }
@@ -50,7 +50,7 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+           
         Debug.DrawRay(camera.transform.position, camera.transform.forward*1000,Color.green);
         Debug.DrawRay(hand.transform.position, hand.transform.forward * 1000, Color.green);
         shoot();

@@ -11,7 +11,7 @@ public class chestText : MonoBehaviour
     void Start()
     {
         TM = GetComponent<TextMesh>();
-        TM.text = c.AmountToOpen + "TO OPEN CHEST PRESS F";
+        TM.text = c.AmountToOpen + " COINS TO OPEN CHEST PRESS F";
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
