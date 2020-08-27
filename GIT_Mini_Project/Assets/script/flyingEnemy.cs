@@ -27,7 +27,7 @@ public class flyingEnemy : MonoBehaviour
     {
         transform.forward = Vector3.Lerp(transform.forward,
               player.transform.position - transform.position, Time.deltaTime);
-        print(Vector3.Distance(transform.position, player.transform.position));
+
 
         if (Vector3.Distance(transform.position, player.transform.position) > 30)
         {
@@ -38,7 +38,7 @@ public class flyingEnemy : MonoBehaviour
         else
         {
             rb.constraints = RigidbodyConstraints.FreezePosition;
-            print(canShoot);
+
             if (canShoot == true)
             {
 

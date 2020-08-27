@@ -36,6 +36,9 @@ public class playerScript : MonoBehaviour
     public float RocketChance;
     public GameObject RocketSpawn;
 
+    //regain health
+    bool regain = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +63,38 @@ public class playerScript : MonoBehaviour
             }
            
         }
+        if(Chp<Thp )
+        {
+            if(regain==false)
+            {
+                Invoke("activateRegain", 2);
+            }
+        }
+    }
+
+    public void activateRegain()
+    {
+        regain = true;
+
+        InvokeRepeating("healthRegain", 0, 0.1f);
+
+        CancelInvoke("activateRegain");
+    }
+
+    public void healthRegain()
+    {
+        Chp += 1;
+        if(Chp>Thp)
+        {
+            Chp = Thp;
+            regain = false;
+            CancelInvoke("healthRegain");
+        }
+    }
+    public void cancelHp()
+    {
+        regain = false;
+        CancelInvoke("healthRegain");
     }
 
     public void shoot()

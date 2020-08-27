@@ -77,11 +77,15 @@ public class chest : MonoBehaviour
         {
             PS.Chp -= other.gameObject.GetComponent<enemy>().damage;
             healthBar.sliderhealth(health);
+            PS.cancelHp();
+            
         }
         else if (other.gameObject.tag == "enemybullet")
         {
             PS.Chp -= other.gameObject.GetComponent<bullet>().damage;
             healthBar.sliderhealth(health);
+            PS.cancelHp();
+
         }
     }
 
