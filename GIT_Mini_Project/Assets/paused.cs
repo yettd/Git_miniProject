@@ -53,4 +53,5 @@ public class paused : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
+    
 }

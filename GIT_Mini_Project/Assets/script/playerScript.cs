@@ -70,6 +70,10 @@ public class playerScript : MonoBehaviour
                 Invoke("activateRegain", 2);
             }
         }
+        if (Chp <= 0)
+        {
+            SceneManager.LoadScene("Game lose");
+        }
     }
 
     public void activateRegain()
@@ -181,7 +185,8 @@ public class playerScript : MonoBehaviour
             Chp -= 10;
            
         }
-        
+
+
     }
     private void OnTriggerStay(Collider other)
     {
