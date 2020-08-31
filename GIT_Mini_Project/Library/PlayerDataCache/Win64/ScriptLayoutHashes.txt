@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/limna/OneDrive/Desktop/GIT_Mini_Project.exe
+C:/Users/limna/OneDrive/Desktop/GIT_miniproject/22_Limnan_20_Junkai_GIT_MINI_PROJECT_Build/GIT_Mini_Project.exe
 SceneListBegin?
 Assets/Scenes/Main menu.unity
 Assets/Scenes/level1.unity
